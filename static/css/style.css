@@ -1,0 +1,145 @@
+/* General body styling */
+body {
+    background-image: url('../images/bg_1.jpg'); /* Corrected path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Changed to column for navbar at the top */
+}
+
+/* Add a semi-transparent lighter overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Place behind other content */
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed; /* Fixes navbar at the top */
+    top: 0; /* Aligns to the top */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: black; /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect for the navbar background */
+    border-radius: 0 0 8px 8px; /* Rounded corners for the bottom */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 2px 2px; /* Adjusted padding to decrease height */
+}
+
+/* Navbar brand */
+.navbar-brand {
+    color: green; /* Change to green for the brand text */
+    font-size: 30px;
+    font-weight: bold; /* Bold font for the brand */
+    display: flex; /* Use flex for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styling */
+.navbar-brand img {
+    height: 30px; /* Decrease height of the logo */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+/* Container styles */
+.container {
+    position: relative;
+    top: 90px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 1200px; /* Adjusted width for better readability */
+    margin: 80px auto 20px auto; /* Center the container */
+    z-index: 1; /* Ensure the content is above the overlay */
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column; /* Arrange inputs vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Title styling */
+h1 {
+    color: black;
+    font-weight: bold;
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column; /* Arrange input groups vertically */
+    width: 100%;
+}
+.form-row{
+    color: Black;
+    font-weight: bolder;
+}
+
+/* Input field styling */
+input[type="number"] {
+    padding: 10px;
+    color: black; /* Set input text color to black */
+    font-weight: bold; /* Make input text bold */
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button styling */
+.btn-primary {
+
+    padding: 10px;
+    background-color: black; /* Set button color to black */
+    color: greenyellow; /* Set text color to green */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: bolder; /* Make button text bold */
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Space above button */
+    width: 30%; /* Reduced width for the button */
+    align-self: center; /* Center the button */
+}
+
+
+/* Button hover effect */
+.btn-primary:hover {
+    background-color: gray; /* Darker green on hover */
+}
+
+/* Prediction result styling */
+h2 {
+    color: black;
+    font-weight: bolder;
+    text-align: center; /* Center the prediction result */
+    margin-top: 20px; /* Space above the result */
+}
+
+/* Image styling */
+img {
+    display: block; /* Center the image block */
+    margin: 20px auto; /* Center the image with automatic margins */
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo{
+    position: relative;
+    left: 330px;
+    top: 60px
+}
